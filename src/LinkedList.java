@@ -12,7 +12,16 @@ class LinkedList {
         tail = newNode;  // Update the tail to the new node
     }
 
-
+    public void dequeue() {
+        if (head == null) {
+            System.out.println("Queue is empty");
+            return;
+        }
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+    }
     public void printQueue() {
         Node current = head;
         while (current != null) {
